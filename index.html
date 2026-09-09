@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Stravan Technologies | IT Training & Development</title>
+
+<meta name="description" content="Stravan Technologies - IT Training, Development, Application Development, Web Designing and SAP FICO Services in Bengaluru.">
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    color: #222;
+    background: #ffffff;
+}
+
+header {
+    background: #0b1f3a;
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+}
+
+.navbar {
+    max-width: 1200px;
+    margin: auto;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.logo span {
+    color: #38bdf8;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 22px;
+    font-size: 15px;
+}
+
+nav a:hover {
+    color: #38bdf8;
+}
+
+.hero {
+    background: linear-gradient(135deg, #0b1f3a, #123e70);
+    color: white;
+    padding: 100px 20px;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 15px;
+}
+
+.hero h2 {
+    font-size: 25px;
+    font-weight: normal;
+    color: #7dd3fc;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    max-width: 750px;
+    margin: auto;
+    font-size: 18px;
+}
+
+.buttons {
+    margin-top: 30px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 13px 25px;
+    margin: 6px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.btn-primary {
+    background: #38bdf8;
+    color: #06213b;
+}
+
+.btn-secondary {
+    border: 1px solid white;
+    color: white;
+}
+
+section {
+    padding: 75px 20px;
+}
+
+.container {
+    max-width: 1150px;
+    margin: auto;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.section-title h2 {
+    font-size: 34px;
+    color: #0b1f3a;
+}
+
+.section-title p {
+    color: #666;
+    margin-top: 8px;
+}
+
+.about {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 45px;
+    align-items: center;
+}
+
+.about h3 {
+    font-size: 28px;
+    color: #0b1f3a;
+    margin-bottom: 15px;
+}
+
+.about p {
+    margin-bottom: 15px;
+    color: #555;
+}
+
+.highlight {
+    background: #f1f8ff;
+    padding: 30px;
+    border-radius: 12px;
+}
+
+.highlight h3 {
+    margin-bottom: 15px;
+}
+
+.highlight ul {
+    list-style: none;
+}
+
+.highlight li {
+    padding: 8px 0;
+}
+
+.highlight li::before {
+    content: "✓";
+    color: #0284c7;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.services {
+    background: #f7f9fc;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.card {
+    background: white;
+    padding: 28px;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.07);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card-icon {
+    font-size: 35px;
+    margin-bottom: 12px;
+}
+
+.card h3 {
+    color: #0b1f3a;
+    margin-bottom: 8px;
+}
+
+.card p {
+    color: #666;
+    font-size: 14px;
+}
+
+.courses {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+.course {
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    padding: 18px;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: bold;
+    color: #164e63;
+}
+
+.course:hover {
+    background: #e0f2fe;
+}
+
+.cta {
+    background: linear-gradient(135deg, #0b1f3a, #164e63);
+    color: white;
+    text-align: center;
+}
+
+.cta h2 {
+    font-size: 35px;
+    margin-bottom: 15px;
+}
+
+.contact {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 35px;
+}
+
+.contact-box {
+    background: #f7f9fc;
+    padding: 30px;
+    border-radius: 12px;
+}
+
+.contact-box h3 {
+    color: #0b1f3a;
+    margin-bottom: 18px;
+}
+
+.contact-item {
+    margin: 14px 0;
+}
+
+.contact-item strong {
+    display: block;
+    color: #164e63;
+}
+
+.contact-item a {
+    color: #333;
+    text-decoration: none;
+}
+
+footer {
+    background: #071426;
+    color: #bbb;
+    text-align: center;
+    padding: 25px 15px;
+}
+
+footer strong {
+    color: white;
+}
+
+.whatsapp {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    background: #25d366;
+    color: white;
+    width: 58px;
+    height: 58px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    font-size: 27px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.25);
+    z-index: 999;
+}
+
+@media (max-width: 900px) {
+
+    nav {
+        display: none;
+    }
+
+    .hero h1 {
+        font-size: 38px;
+    }
+
+    .about,
+    .contact {
+        grid-template-columns: 1fr;
+    }
+
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .courses {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+
+    .hero {
+        padding: 75px 18px;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    .hero h2 {
+        font-size: 21px;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    .courses {
+        grid-template-columns: 1fr;
+    }
+
+    section {
+        padding: 55px 18px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="navbar">
+
+        <div class="logo">
+            STRAVAN <span>TECHNOLOGIES</span>
+        </div>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#courses">Courses</a>
+            <a href="#contact">Contact</a>
+        </nav>
+
+    </div>
+</header>
+
+
+<section class="hero" id="home">
+
+    <h1>STRAVAN TECHNOLOGIES</h1>
+
+    <h2>IT Training & Development</h2>
+
+    <p>
+        Build your technical skills, improve your career opportunities
+        and learn industry-relevant technologies with Stravan Technologies.
+    </p>
+
+    <div class="buttons">
+        <a href="#courses" class="btn btn-primary">Explore Courses</a>
+        <a href="#contact" class="btn btn-secondary">Contact Us</a>
+    </div>
+
+</section>
+
+
+<section id="about">
+
+    <div class="container">
+
+        <div class="section-title">
+            <h2>About Stravan Technologies</h2>
+            <p>Training, Technology and Career Development</p>
+        </div>
+
+        <div class="about">
+
+            <div>
+
+                <h3>Empowering IT Aspirants</h3>
+
+                <p>
+                    Stravan Technologies provides technology training and
+                    development services with a focus on helping aspiring
+                    professionals build practical and career-oriented skills.
+                </p>
+
+                <p>
+                    We provide training in a wide range of technologies and
+                    also offer IT solutions including application development,
+                    web designing and SAP FICO services.
+                </p>
+
+            </div>
+
+            <div class="highlight">
+
+                <h3>Why Choose Us?</h3>
+
+                <ul>
+                    <li>Industry-oriented technical training</li>
+                    <li>Practical learning approach</li>
+                    <li>Career-focused programs</li>
+                    <li>Flexible training options</li>
+                    <li>Technology-focused learning</li>
+                    <li>IT development and support services</li>
+                </ul>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="services" id="services">
+
+    <div class="container">
+
+        <div class="section-title">
+            <h2>Our Services</h2>
+            <p>Technology solutions for students, professionals and businesses</p>
+        </div>
+
+        <div class="grid">
+
+            <div class="card">
+                <div class="card-icon">🎓</div>
+                <h3>IT Training</h3>
+                <p>
+                    Technology training programs designed to develop
+                    practical and professional IT skills.
+                </p>
+            </div>
+
+            <div class="card">
+                <div class="card-icon">💻</div>
+                <h3>Application Development</h3>
+                <p>
+                    Application development solutions for organizations
+                    and business requirements.
+                </p>
+            </div>
+
+            <div class="card">
+                <div class="card-icon">🌐</div>
+                <h3>Web Designing</h3>
+                <p>
+                    Modern and responsive web design solutions for
+                    businesses and organizations.
+                </p>
+            </div>
+
+            <div class="card">
+                <div class="card-icon">📊</div>
+                <h3>SAP FICO Services</h3>
+                <p>
+                    SAP FICO-related training and professional technology
+                    services.
+                </p>
+            </div>
+
+            <div class="card">
+                <div class="card-icon">🎨</div>
+                <h3>Logo Design</h3>
+                <p>
+                    Creative logo and branding support for startup
+                    organizations and businesses.
+                </p>
+            </div>
+
+            <div class="card">
+                <div class="card-icon">🛠️</div>
+                <h3>Online Support</h3>
+                <p>
+                    Online support for selected tools, applications
+                    and technology requirements.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<section id="courses">
+
+    <div class="container">
+
+        <div class="section-title">
+            <h2>Popular Courses</h2>
+            <p>Technology courses available through Stravan Technologies</p>
+        </div>
+
+        <div class="courses">
+
+            <div class="course">ASP .NET</div>
+            <div class="course">Agile Project Management</div>
+            <div class="course">C / DS / C++</div>
+            <div class="course">Core Java & J2EE</div>
+
+            <div class="course">Digital Marketing</div>
+            <div class="course">Excel Basic + Advanced</div>
+            <div class="course">Hadoop</div>
+            <div class="course">HTML5 CSS3 JavaScript</div>
+
+            <div class="course">Hibernate / Struts / Spring</div>
+            <div class="course">J2EE Frameworks</div>
+            <div class="course">OCJP Java Certification</div>
+            <div class="course">PHP & MySQL</div>
+
+            <div class="course">PMP Certification</div>
+            <div class="course">Python</div>
+            <div class="course">SQL / PL-SQL</div>
+            <div class="course">Testing Tools</div>
+
+            <div class="course">Tally ERP-9</div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="cta">
+
+    <div class="container">
+
+        <h2>Build Skills. Build Your Career.</h2>
+
+        <p>
+            Start learning industry-relevant technologies today.
+        </p>
+
+        <div class="buttons">
+            <a href="#contact" class="btn btn-primary">
+                Get in Touch
+            </a>
+        </div>
+
+    </div>
+
+</section>
+
+
+<section id="contact">
+
+    <div class="container">
+
+        <div class="section-title">
+            <h2>Contact Us</h2>
+            <p>We are here to help with your training and technology needs</p>
+        </div>
+
+        <div class="contact">
+
+            <div class="contact-box">
+
+                <h3>Stravan Technologies</h3>
+
+                <div class="contact-item">
+                    <strong>📍 Address</strong>
+                    #32, 2nd Floor, M.K Plaza,<br>
+                    Ashwathnagar,<br>
+                    Sanjaynagar Main Road,<br>
+                    Bengaluru - 560094
+                </div>
+
+                <div class="contact-item">
+                    <strong>📞 Office</strong>
+                    <a href="tel:08042009359">
+                        080-42009359
+                    </a>
+                </div>
+
+                <div class="contact-item">
+                    <strong>📱 Mobile</strong>
+                    <a href="tel:+918050515155">
+                        +91 8050515155
+                    </a>
+                </div>
+
+            </div>
+
+
+            <div class="contact-box">
+
+                <h3>Send an Enquiry</h3>
+
+                <p>
+                    Interested in our courses or IT services?
+                    Contact us for more information.
+                </p>
+
+                <br>
+
+                <a
+                    href="mailto:info@stravantechnologoies.com"
+                    class="btn btn-primary"
+                >
+                    📧 Email Us
+                </a>
+
+                <br>
+
+                <a
+                    href="tel:+918050515155"
+                    class="btn btn-primary"
+                >
+                    📞 Call Us
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<footer>
+
+    <p>
+        © 2026 <strong>Stravan Technologies</strong>.
+        All Rights Reserved.
+    </p>
+
+    <p>
+        IT Training & Development | Bengaluru
+    </p>
+
+</footer>
+
+
+<a
+    class="whatsapp"
+    href="https://wa.me/918050515155"
+    target="_blank"
+    title="Chat on WhatsApp"
+>
+    ☎
+</a>
+
+</body>
+</html>
